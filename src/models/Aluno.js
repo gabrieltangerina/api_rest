@@ -2,7 +2,7 @@ import Sequelize, { Model } from 'sequelize';
 
 export default class Aluno extends Model {
   static init(sequelize) {
-    super.init({
+    super.init({ // inicializa/configura o modelo Sequelize
       nome: Sequelize.STRING,
       sobrenome: Sequelize.STRING,
       email: Sequelize.STRING,
@@ -12,6 +12,6 @@ export default class Aluno extends Model {
     }, {
       sequelize,
     });
-    return this;
+    return this; // Retorna a classe aluno
   }
 }

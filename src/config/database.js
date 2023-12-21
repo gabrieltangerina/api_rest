@@ -1,5 +1,8 @@
 require('dotenv').config();
 
+/* Arquivo usado para configurar a conexão do Sequelize com o banco de dados
+e também define opções de formatação e comportamento para as tabelas no banco de dados */
+
 module.exports = {
   dialect: 'mysql',
   host: process.env.DATABASE_HOST,
