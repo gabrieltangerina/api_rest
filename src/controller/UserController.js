@@ -36,6 +36,8 @@ class UserController {
 
   async update(req, res) {
     try {
+      // Não há a possibilidade de editar outro usuário a não ser o seu porque é passado o id
+      // de quem fez a requisição
       const user = await User.findByPk(req.userId);
 
       if (!user) {
