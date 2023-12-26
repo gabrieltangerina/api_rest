@@ -16,10 +16,10 @@ class FotoController {
       try {
         const { originalname, filename } = req.file;
         const { aluno_id } = req.body;
-        const { id } = await Foto.create({ originalname, filename, aluno_id });
+        const { id, url } = await Foto.create({ originalname, filename, aluno_id });
 
         return res.json({
-          id, originalname, filename, aluno_id,
+          id, originalname, filename, aluno_id, url,
         });
       } catch (e) {
         return res.status(400).json({
