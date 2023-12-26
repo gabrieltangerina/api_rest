@@ -4,7 +4,7 @@ require('dotenv').config();
 e também define opções de formatação e comportamento para as tabelas no banco de dados */
 
 module.exports = {
-  dialect: 'mysql',
+  dialect: 'mariadb',
   host: process.env.DATABASE_HOST,
   port: process.env.DATABASE_PORT,
   username: process.env.DATABASE_USERNAME,
